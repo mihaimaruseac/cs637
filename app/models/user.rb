@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :active, :name, :password, :password_confirmation
+  attr_accessible :active, :name, :password, :password_confirmation, :active
   validates :name, presence: true
 
   validates :password, presence: true
@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validates :password, length: { minimum: 6 }
   has_secure_password
+
+  has_many :roles, inverse_of: :user
 end
