@@ -7,4 +7,6 @@ class Course < ActiveRecord::Base
   validates :limit, presence: true
   validates :startDate, presence: true
   validates :endDate, presence: true
+
+  has_and_belongs_to_many :instructor, join_table: "teach"
 end
