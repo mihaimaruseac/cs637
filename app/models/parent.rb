@@ -3,4 +3,5 @@ class Parent < ActiveRecord::Base
 
   validates :profile, presence: true
   belongs_to :profile, inverse_of: :parent
+  has_and_belongs_to_many :child
 end
