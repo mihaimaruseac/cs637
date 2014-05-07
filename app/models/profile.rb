@@ -20,4 +20,5 @@ class Profile < ActiveRecord::Base
 
   belongs_to :user, inverse_of: :profile
   has_one :address, inverse_of: :profile
+  has_one :instructor, inverse_of: :profile
 end
