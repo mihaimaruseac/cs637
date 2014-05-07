@@ -22,4 +22,5 @@ class Profile < ActiveRecord::Base
   has_one :address, inverse_of: :profile
   has_one :instructor, inverse_of: :profile
   has_one :child, inverse_of: :profile
+  has_one :parent, inverse_of: :profile
 end
