@@ -12,7 +12,7 @@ class Profile < ActiveRecord::Base
   validates :email_confirmation, presence: true
   validates_confirmation_of :email
 
-  validates :extra, length: { maximum: 500 }
+  validates :extra, length: { maximum: 500 }, unless: "extra.blank?"
 
   validates :firstName, presence: true
   validates :lastName, presence: true
