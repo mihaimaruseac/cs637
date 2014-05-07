@@ -1,4 +1,7 @@
 Child1::Application.routes.draw do
+  resources :profiles
+
+
   resources :testimonials
 
 
