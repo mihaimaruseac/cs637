@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :roles, inverse_of: :user
+  has_one :profile, inverse_of: :user
 end
