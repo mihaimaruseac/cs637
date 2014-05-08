@@ -9,4 +9,6 @@ class Course < ActiveRecord::Base
   validates :endDate, presence: true
 
   has_and_belongs_to_many :instructor, join_table: "teach"
+  has_many :enrolments
+  has_many :children, through: :enrolments
 end
