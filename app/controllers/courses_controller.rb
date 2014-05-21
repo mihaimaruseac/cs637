@@ -30,6 +30,11 @@ class CoursesController < ApplicationController
     @instructor = @course.instructor.first.profile
     @schedules = @course.class_schedules.order :id
 
+    first_course = @schedules.min_by { |s| s.date }
+    first_date = first_course.date
+    @fd_year = first_date.year
+    @fd_month = first_date.month
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @course }
