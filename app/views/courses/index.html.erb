@@ -8,6 +8,8 @@
     <th>Startdate</th>
     <th>Enddate</th>
     <th>Location</th>
+    <th>Enrolled count</th>
+    <th>Description</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,6 +23,8 @@
     <td><%= course.startDate %></td>
     <td><%= course.endDate %></td>
     <td><%= course.location %></td>
+    <td><%= course.enroled_count %></td>
+    <td><%= course.short_description %></td>
     <td><%= link_to 'Show', course %></td>
     <td><%= link_to 'Edit', edit_course_path(course) %></td>
     <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

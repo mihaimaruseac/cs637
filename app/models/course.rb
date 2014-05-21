@@ -13,4 +13,17 @@ class Course < ActiveRecord::Base
   has_many :children, through: :enrolments
   has_many :class_schedules, inverse_of: :course
   has_many :descriptions, inverse_of: :course
+
+  def enroled_count
+    return enrolments.length
+  end
+
+  def short_description
+    full = descriptions.where(:dtype => :text).first
+    if full then
+      return full.content[0,16] << "..."
+    else
+      return "No description"
+    end
+  end
 end

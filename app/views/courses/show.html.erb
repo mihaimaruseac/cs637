@@ -30,6 +30,15 @@
   <%= @course.location %>
 </p>
 
+<p>
+  <b>Enrolled count:</b>
+  <%= @course.enroled_count %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @descriptions %>
+</p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
