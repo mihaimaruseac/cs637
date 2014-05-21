@@ -53,10 +53,9 @@
 <script type="text/javascript">
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers(<%=raw @position.to_json %>);
+    markers = handler.addMarkers(<%=raw @position.to_json %>, { animation:google.maps.Animation.DROP});
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
-    //handler.setCenter(bounds.getCenter());
-    handler.setZoom(2);
+    handler.getMap().setZoom(12);
   });
 </script>
