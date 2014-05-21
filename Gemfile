@@ -29,6 +29,11 @@ gem 'therubyracer', :platforms => :ruby
 # MM: Add bcrypt gem
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+# MM: Add gmaps4rails
+gem 'gmaps4rails'
+gem 'underscore-rails'
+gem 'geocoder'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
