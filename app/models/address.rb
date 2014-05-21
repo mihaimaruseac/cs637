@@ -8,4 +8,8 @@ class Address < ActiveRecord::Base
 
   belongs_to :profile, inverse_of: :address
   has_many :class_schedules, inverse_of: :address
+
+  def string
+    return "%s, %s, %s" % [street, city, state]
+  end
 end

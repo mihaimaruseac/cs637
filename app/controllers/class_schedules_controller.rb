@@ -14,6 +14,16 @@ class ClassSchedulesController < ApplicationController
   # GET /class_schedules/1.json
   def show
     @class_schedule = ClassSchedule.find(params[:id])
+    @course = @class_schedule.course
+
+    @address = @class_schedule.address
+    @position = Gmaps4rails.build_markers(@address) do |address, marker|
+      location = "%s, %s, %s" % [address.street, address.city, address.state]
+      cs = Geocoder.coordinates(address.string)
+      marker.lat cs[0]
+      marker.lng cs[1]
+      marker.title @course.name
+    end
 
     respond_to do |format|
       format.html # show.html.erb

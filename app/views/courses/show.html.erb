@@ -66,21 +66,14 @@
   <ol>
     <% @schedules.each do |s| %>
       <li value="<%=s.number%>">
-        <%= link_to s.date, s %> --
-        <%= s.address.street %>
+        <%= link_to "%s -- %s" % [s.date, s.address.street], s %>
       </li>
     <% end %>
   </ol>
 </p>
 
-<%= month_calendar do |date| %>
-  <%= date %>
-<% end %>
-
-<!--
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
--->
 
 <script type="text/javascript">
   handler = Gmaps.build('Google');
