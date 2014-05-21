@@ -27,6 +27,8 @@ class CoursesController < ApplicationController
       c.child.profile
     end
 
+    @instructor = @course.instructor.first.profile
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @course }
