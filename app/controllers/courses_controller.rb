@@ -15,11 +15,16 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @descriptions = @course.descriptions
+
     @position = Gmaps4rails.build_markers(@course) do |course, marker|
       cs = Geocoder.coordinates(course.location)
       marker.lat cs[0]
       marker.lng cs[1]
       marker.title course.name
+    end
+
+    @students = @course.enrolments.map do |c|
+      c.child.profile
     end
 
     respond_to do |format|

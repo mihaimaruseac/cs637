@@ -47,13 +47,25 @@
   <%= @descriptions %>
 </p>
 
+<p>
+  <b>Enrolled list:</b>
+  <ul>
+    <% @students.each do |s| %>
+      <li><%= link_to s.fullName, s %></td>
+    <% end %>
+  </ul>
+</p>
+
+
+<!--
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
+-->
 
 <script type="text/javascript">
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers(<%=raw @position.to_json %>, { animation:google.maps.Animation.DROP});
+    markers = handler.addMarkers(<%=raw @position.to_json %>, {});
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
     handler.getMap().setZoom(12);

@@ -23,4 +23,8 @@ class Profile < ActiveRecord::Base
   has_one :instructor, inverse_of: :profile
   has_one :child, inverse_of: :profile
   has_one :parent, inverse_of: :profile
+
+  def fullName
+    return "%s %s" % [firstName, lastName]
+  end
 end
