@@ -34,6 +34,9 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'geocoder'
 
+# MM: calendar
+gem 'later_dude', '>= 0.3.1' # 0.3.0 was broken!
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
