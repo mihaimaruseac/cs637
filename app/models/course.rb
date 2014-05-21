@@ -12,4 +12,5 @@ class Course < ActiveRecord::Base
   has_many :enrolments
   has_many :children, through: :enrolments
   has_many :class_schedules, inverse_of: :course
+  has_many :descriptions, inverse_of: :course
 end
