@@ -56,9 +56,21 @@
   <b>Enrolled list:</b>
   <ul>
     <% @students.each do |s| %>
-      <li><%= link_to s.fullName, s %></td>
+      <li><%= link_to s.fullName, s %></li>
     <% end %>
   </ul>
+</p>
+
+<p>
+  <b>Classes:</b>
+  <ol>
+    <% @schedules.each do |s| %>
+      <li value="<%=s.number%>">
+        <%= link_to s.date, s %> --
+        <%= s.address.street %>
+      </li>
+    <% end %>
+  </ol>
 </p>
 
 

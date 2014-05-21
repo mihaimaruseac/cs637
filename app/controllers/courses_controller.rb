@@ -28,6 +28,7 @@ class CoursesController < ApplicationController
     end
 
     @instructor = @course.instructor.first.profile
+    @schedules = @course.class_schedules.order :id
 
     respond_to do |format|
       format.html # show.html.erb
