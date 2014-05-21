@@ -1,39 +1,16 @@
 Child1::Application.routes.draw do
   resources :descriptions
-
-
   resources :class_schedules
-
-
   resources :enrolments
-
-
   resources :courses
-
-
   resources :parents
-
-
   resources :children
-
-
   resources :instructors
-
-
   resources :addresses
-
-
   resources :profiles
-
-
   resources :testimonials
-
-
   resources :roles
-
-
   resources :users
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
