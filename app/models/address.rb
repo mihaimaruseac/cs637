@@ -5,7 +5,7 @@ class Address < ActiveRecord::Base
   validates :state, presence: true
   validates :street, presence: true
   validates :zip, presence: true
-  validates :profile, presence: true
 
   belongs_to :profile, inverse_of: :address
+  has_many :class_schedules, inverse_of: :address
 end

@@ -11,4 +11,5 @@ class Course < ActiveRecord::Base
   has_and_belongs_to_many :instructor, join_table: "teach"
   has_many :enrolments
   has_many :children, through: :enrolments
+  has_many :class_schedules, inverse_of: :course
 end
