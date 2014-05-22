@@ -33,4 +33,8 @@ class Course < ActiveRecord::Base
       return "No description"
     end
   end
+
+  def list_enrolled
+     return "%s (%d)" % [name, enroled_count]
+  end
 end

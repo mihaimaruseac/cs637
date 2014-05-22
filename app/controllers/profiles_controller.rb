@@ -14,6 +14,15 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
     @profile = Profile.find(params[:id])
+    @roles = @profile.user.roles.where(active:true).map { |r| r.role }
+
+    @is_instructor = @roles.include? "instructor"
+    @is_parent = @roles.include? "parent"
+    @is_child = @roles.include? "child"
+
+    if @is_instructor
+      @courses = @profile.instructor.course
+    end
 
     respond_to do |format|
       format.html # show.html.erb

@@ -18,7 +18,6 @@ class ClassSchedulesController < ApplicationController
 
     @address = @class_schedule.address
     @position = Gmaps4rails.build_markers(@address) do |address, marker|
-      location = "%s, %s, %s" % [address.street, address.city, address.state]
       cs = Geocoder.coordinates(address.string)
       marker.lat cs[0]
       marker.lng cs[1]
