@@ -1,4 +1,12 @@
 Child1::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/for_parents"
+
+  get "static_pages/for_children"
+
+  get "static_pages/for_instructors"
+
   resources :descriptions
   resources :class_schedules
   resources :enrolments
