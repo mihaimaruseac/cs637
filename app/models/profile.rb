@@ -5,7 +5,7 @@ class Profile < ActiveRecord::Base
   validates :age, presence: true,
                   inclusion: { in: 5..100 }
 
-  validates :gender, inclusion: { in: [:m, :f] }, unless: "gender.blank?"
+  validates :gender, inclusion: { in: ["m", "f"] }, unless: "gender.blank?"
 
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false }
