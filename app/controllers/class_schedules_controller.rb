@@ -2,12 +2,14 @@ class ClassSchedulesController < ApplicationController
   # GET /class_schedules
   # GET /class_schedules.json
   def index
-    @class_schedules = ClassSchedule.all
+    render status: :forbidden,
+           text: "<strong>Requested Page Not Found or Forbidden</strong>".html_safe
+    #@class_schedules = ClassSchedule.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @class_schedules }
-    end
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json { render json: @class_schedules }
+    #end
   end
 
   # GET /class_schedules/1

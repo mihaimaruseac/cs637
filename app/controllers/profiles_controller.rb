@@ -2,12 +2,14 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all
+    render status: :forbidden,
+           text: "<strong>Requested Page Not Found or Forbidden</strong>".html_safe
+    #@profiles = Profile.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @profiles }
-    end
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json { render json: @profiles }
+    #end
   end
 
   # GET /profiles/1

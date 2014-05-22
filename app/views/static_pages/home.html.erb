@@ -9,12 +9,12 @@ fun.</p>
 
 <p>See what's in for you as:</p>
 <ul>
-  <li>Parent</li>
-  <li>Children</li>
-  <li>Instructor</li>
+  <li><%= link_to "Parent", parents_url %></li>
+  <li><%= link_to "Child", children_url %></li>
+  <li><%= link_to "Instructor", instructors_url %></li>
 </ul>
 
-<p>See all courses at</p>
+<p>See all <%= link_to "courses", :courses %>.</p>
 
 <p>One testimonial related to our business:</p>
 
@@ -23,4 +23,4 @@ fun.</p>
 <%= t.text %>
 </quote> by <%= t.author %> in <%= t.year %>
 
-<p>See more testimonials at.</p>
+<p>See more <%= link_to "testimonials", :testimonials %>.</p>

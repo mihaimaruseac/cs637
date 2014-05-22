@@ -1,24 +1,22 @@
 Child1::Application.routes.draw do
-  get "static_pages/home"
-
-  get "static_pages/for_parents"
-
-  get "static_pages/for_children"
-
-  get "static_pages/for_instructors"
-
-  resources :descriptions
+  #resources :descriptions
   resources :class_schedules
-  resources :enrolments
+  #resources :enrolments
   resources :courses
-  resources :parents
-  resources :children
-  resources :instructors
-  resources :addresses
+  #resources :parents
+  #resources :children
+  #resources :instructors
+  #resources :addresses
   resources :profiles
   resources :testimonials
-  resources :roles
-  resources :users
+  #resources :roles
+  #resources :users
+
+  match 'parents' => 'static_pages#for_parents', :as => :parents
+  match 'children' => 'static_pages#for_children', :as => :children
+  match 'instructors' => 'static_pages#for_instructors', :as => :instructors
+
+  root :to => 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

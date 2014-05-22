@@ -1,4 +1,4 @@
-<h1>Listing testimonials</h1>
+<% page_titling "All testimonials" %>
 
 <table>
   <tr>
@@ -15,13 +15,6 @@
     <td><%= testimonial.text %></td>
     <td><%= testimonial.author %></td>
     <td><%= testimonial.year %></td>
-    <td><%= link_to 'Show', testimonial %></td>
-    <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
-    <td><%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Testimonial', new_testimonial_path %>
