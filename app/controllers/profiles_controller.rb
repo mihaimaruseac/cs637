@@ -24,6 +24,14 @@ class ProfilesController < ApplicationController
       @courses = @profile.instructor.course
     end
 
+    if @is_parent
+      @children = @profile.parent.child
+    end
+
+    if @is_child
+      @child_courses = @profile.child.courses
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @profile }

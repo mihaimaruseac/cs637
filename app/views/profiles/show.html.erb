@@ -48,5 +48,33 @@
   <% end %>
 </p>
 
+<p>
+  <% if @is_parent %>
+     <b><%= pluralize(@children.count, "Child") %>:</b>
+     <ul>
+       <% @children.each do |c| %>
+         <li><%= link_to c.profile.fullName, c.profile %></li>
+         <em><%= pluralize(c.courses.count, "Course") %>:</em>
+         <ul>
+           <% c.courses.each do |crs| %>
+             <li><%= link_to crs.name, crs %></li>
+           <% end %>
+         </ul>
+       <% end %>
+     </ul>
+  <% end %>
+</p>
+
+<p>
+  <% if @is_child %>
+  <b><%= pluralize(@child_courses.count, "Course") %>:</b>
+  <ul>
+    <% @child_courses.each do |crs| %>
+      <li><%= link_to crs.name, crs %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
