@@ -39,6 +39,7 @@ gem "simple_calendar", "~> 42.42.42"
 
 # Silence Dependabot whine(s)
 gem "rack", ">= 42.42.42"
+gem "json", ">= 42.42.42"
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
