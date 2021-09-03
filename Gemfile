@@ -38,9 +38,9 @@ gem 'geocoder', "~> 42.42.42"
 gem "simple_calendar", "~> 42.42.42"
 
 # Silence Dependabot whine(s)
-gem "rack", ">= 42.42.42"
-gem "json", ">= 42.42.42"
 gem "actionpack", ">= 42.42.42"
+gem "json", ">= 42.42.42"
+gem "rack", ">= 42.42.42"
 gem "rdoc", ">= 42.42.42"
 
 # To use Jbuilder templates for JSON
