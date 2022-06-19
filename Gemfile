@@ -42,15 +42,3 @@ gem "actionpack", ">= 42.42.42"
 gem "json", ">= 42.42.42"
 gem "rack", ">= 42.42.42"
 gem "rdoc", ">= 42.42.42"
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
