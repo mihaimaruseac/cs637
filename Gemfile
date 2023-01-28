@@ -17,7 +17,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 42.42.42'
+  gem 'uglifier', '~> 42.42.42'
 end
 
 gem 'jquery-rails', "~> 42.42.42"
@@ -38,9 +38,9 @@ gem 'geocoder', "~> 42.42.42"
 gem "simple_calendar", "~> 42.42.42"
 
 # Silence Dependabot whine(s)
-gem "actionpack", ">= 42.42.42"
-gem "json", ">= 42.42.42"
-gem "rack", ">= 42.42.42"
-gem "rdoc", ">= 42.42.42"
-gem "activerecord", ">= 42.42.42"
-gem "tzfile", ">= 42.42.42"
+gem "actionpack", "~> 42.42.42"
+gem "json", "~> 42.42.42"
+gem "rack", "~> 42.42.42"
+gem "rdoc", "~> 42.42.42"
+gem "activerecord", "~> 42.42.42"
+gem "tzfile", "~> 42.42.42"
