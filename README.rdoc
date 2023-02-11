@@ -1,1 +1,0 @@
-This was a class project. Not really useful. Right now, only updating the repo when Dependabot complains.
