@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  course_id: 1
+  order: 1
+  type: 
+  content: MyString
+
+two:
+  course_id: 1
+  order: 1
+  type: 
+  content: MyString

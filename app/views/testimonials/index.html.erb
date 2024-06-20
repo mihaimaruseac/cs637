@@ -1,0 +1,20 @@
+<% page_titling "All testimonials" %>
+
+<table>
+  <tr>
+    <th>Text</th>
+    <th>Author</th>
+    <th>Year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @testimonials.each do |testimonial| %>
+  <tr>
+    <td><%= testimonial.text %></td>
+    <td><%= testimonial.author %></td>
+    <td><%= testimonial.year %></td>
+  </tr>
+<% end %>
+</table>
